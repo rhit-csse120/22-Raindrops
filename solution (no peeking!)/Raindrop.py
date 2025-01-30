@@ -41,9 +41,6 @@ class Raindrop:
         # DONE 10: Draw a vertical line that is 5 pixels long and
         #  2 pixels thick, from the current position of this Raindrop
         #  (use either a black or blue color).
-        pygame.draw.line(self.screen,
-                         (0, 0, 255),
-                         (self.x, self.y),
-                         (self.x, self.y + 5),
-                         2)
-
+        pygame.draw.line(
+            self.screen, (0, 0, 255), (self.x, self.y), (self.x, self.y + 5), 2
+        )

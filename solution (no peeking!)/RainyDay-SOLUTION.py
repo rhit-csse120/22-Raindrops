@@ -33,12 +33,10 @@ def main():
     #    starting at position x=200 y=400.
     #  Also make a Hero, named alyssa, with appropriate images,
     #    starting at position x=700 y=400.
-    mike = Hero(screen,200, 400,
-                "../media/mike_umbrella.png",
-                "../media/mike.png")
-    alyssa = Hero(screen, 700, 400,
-                  "../media/alyssa_umbrella.png",
-                  "../media/alyssa.png")
+    mike = Hero(screen, 200, 400, "../media/mike_umbrella.png", "../media/mike.png")
+    alyssa = Hero(
+        screen, 700, 400, "../media/alyssa_umbrella.png", "../media/alyssa.png"
+    )
 
     # DONE 17: See the Hero class for this TODO.
     # DONE 18: See the Hero class for this TODO.
@@ -141,9 +139,11 @@ def main():
         #      a Hero, remove it from the Cloud's list of raindrops.
         for k in range(len(cloud.raindrops) - 1, -1, -1):
             raindrop = cloud.raindrops[k]
-            if raindrop.off_screen() \
-                or mike.check_hit_by(raindrop) \
-                or alyssa.check_hit_by(raindrop):
+            if (
+                raindrop.off_screen()
+                or mike.check_hit_by(raindrop)
+                or alyssa.check_hit_by(raindrop)
+            ):
                 del cloud.raindrops[k]
         print(len(cloud.raindrops))
         # FIXME: The above calls   check_hit_by  TWICE per frame.  Ugh.

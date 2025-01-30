@@ -31,7 +31,7 @@ class Cloud:
         #     - x is a random integer between this Cloud's x
         #         and this Cloud's x + 300.
         #     - y is this Cloud's y + 100.
-        raindrop = Raindrop(self.screen,
-                            random.randint(self.x, self.x + 300),
-                            self.y + 100)
+        raindrop = Raindrop(
+            self.screen, random.randint(self.x, self.x + 300), self.y + 100
+        )
         self.raindrops.append(raindrop)

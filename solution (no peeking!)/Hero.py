@@ -52,11 +52,13 @@ class Hero:
         # DONE 20: If this Hero is currently colliding
         #  with the given Raindrop, set this Hero's  last_hit_time
         #  to the current time and return True; else return False.
-        hero_hitbox = pygame.Rect(self.x, self.y,
-                                  self.image_umbrella.get_width(),
-                                  self.image_umbrella.get_height())
-        raindrop_hitbox = pygame.Rect(raindrop.x, raindrop.y,
-                                      2, 5)
+        hero_hitbox = pygame.Rect(
+            self.x,
+            self.y,
+            self.image_umbrella.get_width(),
+            self.image_umbrella.get_height(),
+        )
+        raindrop_hitbox = pygame.Rect(raindrop.x, raindrop.y, 2, 5)
         if hero_hitbox.colliderect(raindrop_hitbox):
             self.last_hit_time = time.time()
             return True
