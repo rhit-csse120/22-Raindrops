@@ -1,8 +1,8 @@
 class Hero:
     def __init__(self, screen, x, y, with_umbrella_filename, without_umbrella_filename):
         """
-        Creates a Hero sprite (Mike) that does not move.
-        If hit by rain he'll put up his umbrella.
+        Creates a Hero sprite (Mike/Alyssa) that does not move.
+        If hit by rain they'll put up their umbrella.
         """
         # TODO 17: Initialize this Hero, as follows:
         #   - Store the screen.
@@ -15,7 +15,6 @@ class Hero:
         #   - Set the "last hit time" to 0.
         #  Use instance variables:
         #    screen  x  y  image_umbrella  image_no_umbrella  image  last_hit_time.
-        #    pass
 
     def draw(self):
         """Draws this sprite onto the screen."""
@@ -28,9 +27,6 @@ class Hero:
         # TODO 18: Draw (blit) this Hero, at this Hero's position,
         #   using the current image.
 
-
-        pass
-
     def check_hit_by(self, raindrop):
         """
         If the given raindrop is hitting this Hero, sets this Hero's
@@ -40,4 +36,3 @@ class Hero:
         # TODO 20: If this Hero is currently colliding
         #  with the given Raindrop, set this Hero's  last_hit_time
         #  to the current time and return True; else return False.
-        pass
